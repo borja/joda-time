@@ -99,31 +99,7 @@ public final class Days extends BaseSingleFieldPeriod {
         }
 
         return (Days) instance;
-
-        switch (days) {
-            case 0:
-                return ZERO;
-            case 1:
-                return ONE;
-            case 2:
-                return TWO;
-            case 3:
-                return THREE;
-            case 4:
-                return FOUR;
-            case 5:
-                return FIVE;
-            case 6:
-                return SIX;
-            case 7:
-                return SEVEN;
-            case Integer.MAX_VALUE:
-                return MAX_VALUE;
-            case Integer.MIN_VALUE:
-                return MIN_VALUE;
-            default:
-                return new Days(days);
-        }
+        
     }
 
     //-----------------------------------------------------------------------

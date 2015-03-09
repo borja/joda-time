@@ -497,7 +497,7 @@ public final class Days extends BaseSingleFieldPeriod {
                 result =  new Days(days);
             }
 
-            super.getInstance(days);
+            return result;
         }
     }
 }

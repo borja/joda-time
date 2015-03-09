@@ -81,6 +81,8 @@ public final class Days extends BaseSingleFieldPeriod {
     public static Days days(int days) {
         HashMap cases =new HashMap<Integer, Days>();
 
+        cases.put(new Integer(0), ZERO);
+
         switch (days) {
             case 0:
                 return ZERO;

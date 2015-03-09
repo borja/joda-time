@@ -95,7 +95,7 @@ public final class Days extends BaseSingleFieldPeriod {
         Object instance = cases.get(new Integer(days));
 
         if (instance == null) {
-            return new Days();
+            return new Days(days);
         }
 
         switch (days) {

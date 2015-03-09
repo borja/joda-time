@@ -26,17 +26,7 @@ public class Pool {
         days.put(new Integer(numeral), day);
     }
 
-    private void addMinutes(int numeral, Minutes minute) {
-        minutes.put(new Integer(numeral), minute);
-    }
 
-
-    private Object getDays(int numeral){
-        Object instance = days.get(new Integer(numeral));
-
-        return instance;
-
-    }
 
     public static Days retrieveDays(int numeral) {
         Pool pool = Pool.getInstance();
@@ -64,6 +54,18 @@ public class Pool {
         }
 
         return (Minutes) result;
+    }
+
+    private void addMinutes(int numeral, Minutes minute) {
+        minutes.put(new Integer(numeral), minute);
+    }
+
+
+    private Object getDays(int numeral){
+        Object instance = days.get(new Integer(numeral));
+
+        return instance;
+
     }
 
     private Object getMinutes(int numeral) {

@@ -487,4 +487,29 @@ public final class Days extends BaseSingleFieldPeriod {
         return "P" + String.valueOf(getValue()) + "D";
     }
 
+
+    public class Pool {
+
+        private HashMap<Integer, Days> instances;
+
+        public Pool() {
+            this.instances = new HashMap<Integer, Days>();
+        }
+
+        public void add(int numeral, Days day) {
+            instances.put(new Integer(numeral), day);
+        }
+
+        public Days getInstance(int numeral){
+            Object instance = instances.get(new Integer(numeral));
+
+            if (instance == null) {
+                return new Days(numeral);
+            }
+
+            return (Days) instance;
+
+        }
+    }
+
 }

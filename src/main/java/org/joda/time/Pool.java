@@ -14,6 +14,8 @@ public class Pool {
         if (myInstance == null) {
             myInstance = new Pool();
         }
+
+        return myInstance;
     }
 
     public void add(int numeral, Days day) {

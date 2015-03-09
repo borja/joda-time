@@ -34,9 +34,6 @@ public class Pool {
     public Object getDays(int numeral){
         Object instance = days.get(new Integer(numeral));
 
-        if (instance == null) {
-            return null;
-        }
 
         return instance;
 

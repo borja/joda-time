@@ -50,7 +50,7 @@ public class Pool {
     }
 
 
-    public static Minutes getMinutes(int minutes) {
+    public static Minutes getMinutes(int numeral) {
 
         Pool pool = Pool.getInstance();
 

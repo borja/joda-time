@@ -20,7 +20,7 @@ public class Pool {
         return myInstance;
     }
 
-    public void add(int numeral, Days day) {
+    private void add(int numeral, Days day) {
         instances.put(new Integer(numeral), day);
     }
 

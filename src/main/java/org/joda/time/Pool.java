@@ -44,8 +44,8 @@ public class Pool {
 
 
         if (result == null) {
-            pool.add(numeral);
             result =  new Days(numeral);
+            pool.add(numeral, result);
         }
 
         return (Days) result;

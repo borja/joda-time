@@ -31,7 +31,7 @@ public class Pool {
     }
 
 
-    public Object getInstance(int numeral){
+    public Object getDays(int numeral){
         Object instance = days.get(new Integer(numeral));
 
         if (instance == null) {
@@ -45,7 +45,7 @@ public class Pool {
     public static Days retrieveDays(int numeral) {
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getInstance(numeral);
+        Object result = pool.getDays(numeral);
 
         if (result == null) {
             result =  new Days(numeral);
@@ -58,15 +58,6 @@ public class Pool {
 
     public static Minutes retrieveMinutes(int numeral) {
 
-        Pool pool = Pool.getInstance();
-
-        Object result = pool.getInstance(numeral);
-
-        if (result == null) {
-            result =  new Minutes(numeral);
-            pool.add(numeral, (Minutes) result);
-        }
-
-        return (Minutes) result;
+        return null
     }
 }

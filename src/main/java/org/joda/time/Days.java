@@ -98,6 +98,8 @@ public final class Days extends BaseSingleFieldPeriod {
             return new Days(days);
         }
 
+        return (Days) instance;
+
         switch (days) {
             case 0:
                 return ZERO;

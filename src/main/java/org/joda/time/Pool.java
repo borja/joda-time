@@ -12,7 +12,7 @@ public class Pool {
     }
 
     public static Pool getInstance() {
-        
+
         if (myInstance == null) {
             myInstance = new Pool();
         }
@@ -33,5 +33,17 @@ public class Pool {
 
         return instance;
 
+    }
+
+    public Days getDays(int days) {
+        Pool pool = Pool.getInstance();
+
+        Object result = pool.getInstance(days);
+
+        if (result == null) {
+            result =  new Days(days);
+        }
+
+        return (Days) result;
     }
 }

@@ -79,6 +79,8 @@ public final class Days extends BaseSingleFieldPeriod {
      * @return the instance of Days
      */
     public static Days days(int days) {
+        Pool cases = new Pool();
+
         HashMap cases =new HashMap<Integer, Days>();
 
         cases.put(new Integer(0), ZERO);

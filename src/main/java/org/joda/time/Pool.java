@@ -5,11 +5,11 @@ import java.util.HashMap;
 public class Pool {
 
     private static Pool myInstance;
-    private HashMap<Integer, Object> instances;
+    private HashMap<Integer, Object> days;
     private HashMap<Integer, Minutes> minutes;
 
     private Pool() {
-        this.instances = new HashMap<Integer, Object>();
+        this.days = new HashMap<Integer, Object>();
     }
 
     public static Pool getInstance() {
@@ -22,7 +22,7 @@ public class Pool {
     }
 
     private void add(int numeral, Days day) {
-        instances.put(new Integer(numeral), day);
+        days.put(new Integer(numeral), day);
     }
 
     private void addMinutes(int numeral, Minutes minute) {
@@ -31,7 +31,7 @@ public class Pool {
 
 
     public Object getInstance(int numeral){
-        Object instance = instances.get(new Integer(numeral));
+        Object instance = days.get(new Integer(numeral));
 
         if (instance == null) {
             return null;

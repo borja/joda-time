@@ -491,7 +491,7 @@ public final class Days extends BaseSingleFieldPeriod {
 
         @Override
         public Object getInstance(int days) {
-            Object result = parent.getInstance(days);
+            Object result = super.getInstance(days);
 
             if (result == null) {
                 result =  new Days(days);

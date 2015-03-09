@@ -20,7 +20,9 @@ public class Pool {
         return myInstance;
     }
 
-
+    private void add(int numeral, Days day) {
+        instances.put(new Integer(numeral), day);
+    }
 
 
     public Object getInstance(int numeral){
@@ -41,7 +43,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Days(numeral);
-            instances.put(new Integer(numeral), result)
+            pool.add(numeral, (Days) result);
         }
 
         return (Days) result;
@@ -60,9 +62,5 @@ public class Pool {
         }
 
         return (Minutes) result;
-    }
-
-    private void add(int numeral, Days day) {
-        instances.put(new Integer(numeral), day);
     }
 }

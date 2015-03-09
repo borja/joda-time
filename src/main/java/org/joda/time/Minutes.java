@@ -179,7 +179,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      *
      * @param minutes  the number of minutes to represent
      */
-    private Minutes(int minutes) {
+    protected Minutes(int minutes) {
         super(minutes);
     }
 

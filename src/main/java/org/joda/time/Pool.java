@@ -39,7 +39,7 @@ public class Pool {
     public static Days getDays(int numeral) {
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getInstance(days);
+        Object result = pool.getInstance(numeral);
 
         if (result == null) {
             result =  new Days(days);

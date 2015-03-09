@@ -57,7 +57,7 @@ public class Pool {
         Object result = pool.getInstance(numeral);
 
         if (result == null) {
-            result =  new Days(numeral);
+            result =  new Minutes(numeral);
             pool.add(numeral, (Days) result);
         }
 

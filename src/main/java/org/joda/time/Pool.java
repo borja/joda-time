@@ -71,7 +71,7 @@ public class Pool {
     }
 
     private Object getMinutes(int numeral) {
-        Object instance = days.get(new Integer(numeral));
+        Object instance = minutes.get(new Integer(numeral));
 
         if (instance == null) {
             return null;

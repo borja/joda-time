@@ -42,7 +42,7 @@ public class Pool {
         Object result = pool.getInstance(numeral);
 
         if (result == null) {
-            result =  new Days(days);
+            result =  new Days(numeral);
         }
 
         return (Days) result;

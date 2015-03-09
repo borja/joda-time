@@ -41,9 +41,10 @@ public class Pool {
 
         Object result = pool.getInstance(numeral);
 
-        
+
 
         if (result == null) {
+            pool.add(numeral);
             result =  new Days(numeral);
         }
 

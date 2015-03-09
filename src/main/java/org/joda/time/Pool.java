@@ -31,7 +31,7 @@ public class Pool {
     }
 
 
-    public Object getDays(int numeral){
+    private Object getDays(int numeral){
         Object instance = days.get(new Integer(numeral));
 
         return instance;

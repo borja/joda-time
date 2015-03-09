@@ -51,5 +51,16 @@ public class Pool {
 
 
     public static Minutes getMinutes(int minutes) {
+
+        Pool pool = Pool.getInstance();
+
+        Object result = pool.getInstance(numeral);
+
+        if (result == null) {
+            result =  new Days(numeral);
+            pool.add(numeral, (Days) result);
+        }
+
+        return (Days) result;
     }
 }

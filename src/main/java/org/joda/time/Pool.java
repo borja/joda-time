@@ -24,7 +24,7 @@ public class Pool {
         instances.put(new Integer(numeral), day);
     }
 
-    private void addMinutes(int numeral, Days day) {
+    private void addMinutes(int numeral, Minutes minute) {
         instances.put(new Integer(numeral), day);
     }
 

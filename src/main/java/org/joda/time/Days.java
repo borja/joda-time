@@ -78,7 +78,7 @@ public final class Days extends BaseSingleFieldPeriod {
      */
     public static Days days(int days) {
        MyPool cases = new MyPool();
-        
+
         Object result = cases.getInstance(days);
 
         if (result == null) {
@@ -487,6 +487,11 @@ public final class Days extends BaseSingleFieldPeriod {
             this.add(7, SEVEN);
             this.add(Integer.MAX_VALUE, MAX_VALUE);
             this.add(Integer.MIN_VALUE, MIN_VALUE);
+        }
+
+        @Override
+        public Object getInstance(int numeral) {
+            return super.getInstance(numeral);
         }
     }
 }

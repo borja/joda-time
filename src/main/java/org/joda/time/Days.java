@@ -79,13 +79,7 @@ public final class Days extends BaseSingleFieldPeriod {
     public static Days days(int days) {
        MyPool cases = new MyPool();
 
-        Object result = cases.getInstance(days);
-
-        if (result == null) {
-            result =  new Days(days);
-        }
-
-        return (Days) result;
+        return cases.getInstance(days);
 
     }
 

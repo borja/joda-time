@@ -485,7 +485,7 @@ public final class Days extends BaseSingleFieldPeriod {
         return "P" + String.valueOf(getValue()) + "D";
     }
 
-    private class MyPool extends Pool {
+    private static class MyPool extends Pool {
 
     }
 }

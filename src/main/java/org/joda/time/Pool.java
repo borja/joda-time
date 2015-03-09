@@ -11,6 +11,7 @@ public class Pool {
     }
 
     public static Pool getInstance() {
+        Pool myInstance;
         if (myInstance == null) {
             myInstance = new Pool();
         }

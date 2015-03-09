@@ -42,7 +42,7 @@ import org.joda.time.format.PeriodFormatter;
 public final class Minutes extends BaseSingleFieldPeriod {
 
     /** Constant representing zero minutes. */
-    public static final Minutes ZERO = new Minutes(0);
+    public static final Minutes ZERO = Pool.retrieveMinutes(0);
     /** Constant representing one minute. */
     public static final Minutes ONE = new Minutes(1);
     /** Constant representing two minutes. */

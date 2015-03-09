@@ -6,7 +6,7 @@ public class Pool {
 
     private static Pool myInstance;
     private HashMap<Integer, Object> instances;
-    private RequestContext.MapView minutes;
+    private HashMap<Integer, Object> minutes;
 
     private Pool() {
         this.instances = new HashMap<Integer, Object>();

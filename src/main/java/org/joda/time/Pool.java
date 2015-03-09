@@ -36,5 +36,9 @@ public class Pool {
 
     }
 
+    public static Days getDays(int numeral) {
+
+    }
+
 
 }

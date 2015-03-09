@@ -24,6 +24,11 @@ public class Pool {
         instances.put(new Integer(numeral), day);
     }
 
+    public static void add(int numeral, Days day) {
+        instances.put(new Integer(numeral), day);
+    }
+
+
     public Object getInstance(int numeral){
         Object instance = instances.get(new Integer(numeral));
 
@@ -35,5 +40,5 @@ public class Pool {
 
     }
 
-    
+
 }

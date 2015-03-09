@@ -10,6 +10,7 @@ public class Pool {
 
     private Pool() {
         this.days = new HashMap<Integer, Days>();
+        this.days = new HashMap<Integer, Minutes>();
     }
 
     public static Pool getInstance() {

@@ -92,7 +92,7 @@ public final class Days extends BaseSingleFieldPeriod {
         cases.add(Integer.MAX_VALUE, MAX_VALUE);
         cases.add(Integer.MIN_VALUE, MIN_VALUE);
 
-        Days result
+        Object result
         if (cases.getInstance(days) == null) {
             return new Days(days);
         }

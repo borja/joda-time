@@ -192,7 +192,7 @@ public final class Days extends BaseSingleFieldPeriod {
      *
      * @param days  the number of days to represent
      */
-    private Days(int days) {
+    protected Days(int days) {
         super(days);
     }
 

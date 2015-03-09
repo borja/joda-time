@@ -473,7 +473,7 @@ public final class Days extends BaseSingleFieldPeriod {
             Pool pool = Pool.getInstance();
             pool.add(0, ZERO);
             pool.add(1, ONE);
-            this.add(2, TWO);
+            pool.add(2, TWO);
             this.add(3, THREE);
             this.add(4, FOUR);
             this.add(5, FIVE);

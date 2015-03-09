@@ -77,31 +77,10 @@ public final class Days extends BaseSingleFieldPeriod {
      * @return the instance of Days
      */
     public static Days days(int days) {
-        /*switch (days) {
-            case 0:
-                return ZERO;
-            case 1:
-                return ONE;
-            case 2:
-                return TWO;
-            case 3:
-                return THREE;
-            case 4:
-                return FOUR;
-            case 5:
-                return FIVE;
-            case 6:
-                return SIX;
-            case 7:
-                return SEVEN;
-            case Integer.MAX_VALUE:
-                return MAX_VALUE;
-            case Integer.MIN_VALUE:
-                return MIN_VALUE;
-            default:
-                return new Days(days);
-        }*/
-        return new Days(days);
+       MyPool cases = new MyPool();
+
+        return cases.getInstance(days);
+
     }
 
     //-----------------------------------------------------------------------
@@ -489,4 +468,30 @@ public final class Days extends BaseSingleFieldPeriod {
         return "P" + String.valueOf(getValue()) + "D";
     }
 
+    private static class MyPool extends Pool {
+        public MyPool() {
+            super();
+            this.add(0, ZERO);
+            this.add(1, ONE);
+            this.add(2, TWO);
+            this.add(3, THREE);
+            this.add(4, FOUR);
+            this.add(5, FIVE);
+            this.add(6, SIX);
+            this.add(7, SEVEN);
+            this.add(Integer.MAX_VALUE, MAX_VALUE);
+            this.add(Integer.MIN_VALUE, MIN_VALUE);
+        }
+
+        @Override
+        public Days getInstance(int days) {
+            Object result = super.getInstance(days);
+
+            if (result == null) {
+                result =  new Days(days);
+            }
+
+            return (Days) result;
+        }
+    }
 }

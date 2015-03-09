@@ -6,7 +6,7 @@ public class Pool {
 
     private HashMap<Integer, Object> instances;
 
-    public Pool() {
+    private Pool() {
         this.instances = new HashMap<Integer, Object>();
     }
 

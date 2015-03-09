@@ -81,18 +81,18 @@ public final class Days extends BaseSingleFieldPeriod {
     public static Days days(int days) {
         Pool cases = new Pool();
 
-        HashMap cases =new HashMap<Integer, Days>();
 
-        cases.put(new Integer(0), ZERO);
-        cases.put(new Integer(1), ONE);
-        cases.put(new Integer(2), TWO);
-        cases.put(new Integer(3), THREE);
-        cases.put(new Integer(4), FOUR);
-        cases.put(new Integer(5), FIVE);
-        cases.put(new Integer(6), SIX);
-        cases.put(new Integer(7), SEVEN);
-        cases.put(new Integer(Integer.MAX_VALUE), MAX_VALUE);
-        cases.put(new Integer(Integer.MIN_VALUE), MIN_VALUE);
+
+        cases.add(0, ZERO);
+        cases.add(1, ONE);
+        cases.add(2, TWO);
+        cases.add(3, THREE);
+        cases.add(4, FOUR);
+        cases.add(5, FIVE);
+        cases.add(6, SIX);
+        cases.add(7, SEVEN);
+        cases.add(Integer.MAX_VALUE, MAX_VALUE);
+        cases.add(Integer.MIN_VALUE, MIN_VALUE);
 
         Object instance = cases.get(new Integer(days));
 
@@ -490,7 +490,7 @@ public final class Days extends BaseSingleFieldPeriod {
     }
 
 
-    public class Pool {
+    public static class Pool {
 
         private HashMap<Integer, Days> instances;
 

@@ -478,7 +478,7 @@ public final class Days extends BaseSingleFieldPeriod {
             pool.add(4, FOUR);
             pool.add(5, FIVE);
             pool.add(6, SIX);
-            this.add(7, SEVEN);
+            pool.add(7, SEVEN);
             this.add(Integer.MAX_VALUE, MAX_VALUE);
             this.add(Integer.MIN_VALUE, MIN_VALUE);
         }

@@ -50,4 +50,6 @@ public class Pool {
     }
 
 
+    public static Minutes getMinutes(int minutes) {
+    }
 }

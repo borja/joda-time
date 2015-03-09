@@ -60,7 +60,7 @@ public class Pool {
 
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getMinutes(numeral);
+        Object result = minutes.get(new Integer(numeral));
 
         if (result == null) {
             result =  new Minutes(numeral);

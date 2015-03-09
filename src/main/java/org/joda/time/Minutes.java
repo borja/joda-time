@@ -52,7 +52,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
     /** Constant representing the maximum number of minutes that can be stored in this object. */
     public static final Minutes MAX_VALUE = Pool.retrieveMinutes(Integer.MAX_VALUE);
     /** Constant representing the minimum number of minutes that can be stored in this object. */
-    public static final Minutes MIN_VALUE = new Minutes(Integer.MIN_VALUE);
+    public static final Minutes MIN_VALUE = Pool.retrieveMinutes(Integer.MIN_VALUE);
 
     /** The paser to use for this class. */
     private static final PeriodFormatter PARSER = ISOPeriodFormat.standard().withParseType(PeriodType.minutes());

@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Pool {
 
+    private static Pool myInstance;
     private HashMap<Integer, Object> instances;
 
     private Pool() {
@@ -11,7 +12,7 @@ public class Pool {
     }
 
     public static Pool getInstance() {
-        Pool myInstance;
+        
         if (myInstance == null) {
             myInstance = new Pool();
         }

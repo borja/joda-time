@@ -11,7 +11,7 @@ public class Pool {
     }
 
     public static Pool getInstance() {
-        
+        if (myInstance == null)
     }
 
     public void add(int numeral, Days day) {

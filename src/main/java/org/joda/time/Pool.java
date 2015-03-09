@@ -61,6 +61,6 @@ public class Pool {
             pool.add(numeral, (Minutes) result);
         }
 
-        return (Days) result;
+        return (Minutes) result;
     }
 }

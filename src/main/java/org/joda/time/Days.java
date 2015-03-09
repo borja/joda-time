@@ -489,15 +489,15 @@ public final class Days extends BaseSingleFieldPeriod {
         public MyPool() {
             super();
             this.add(0, ZERO);
-            cases.add(1, ONE);
-            cases.add(2, TWO);
-            cases.add(3, THREE);
-            cases.add(4, FOUR);
-            cases.add(5, FIVE);
-            cases.add(6, SIX);
-            cases.add(7, SEVEN);
-            cases.add(Integer.MAX_VALUE, MAX_VALUE);
-            cases.add(Integer.MIN_VALUE, MIN_VALUE);
+            this.add(1, ONE);
+            this.add(2, TWO);
+            this.add(3, THREE);
+            this.add(4, FOUR);
+            this.add(5, FIVE);
+            this.add(6, SIX);
+            this.add(7, SEVEN);
+            this.add(Integer.MAX_VALUE, MAX_VALUE);
+            this.add(Integer.MIN_VALUE, MIN_VALUE);
         }
     }
 }

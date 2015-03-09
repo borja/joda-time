@@ -64,7 +64,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Days(numeral);
-            pool.addDay(numeral, (Days) result);
+            pool.addDay(numeral, (Minutes) result);
         }
 
         return (Minutes) result;

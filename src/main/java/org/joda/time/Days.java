@@ -488,7 +488,7 @@ public final class Days extends BaseSingleFieldPeriod {
     private static class MyPool extends Pool {
         public MyPool() {
             super();
-            instances.add(0, ZERO);
+            this.add(0, ZERO);
             cases.add(1, ONE);
             cases.add(2, TWO);
             cases.add(3, THREE);

@@ -77,7 +77,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @return the instance of Days
      */
     public static Days days(int days) {
-        Pool cases = new Pool();
+       MyPool cases = new MyPool();
 
         cases.add(0, ZERO);
         cases.add(1, ONE);

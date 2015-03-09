@@ -482,7 +482,7 @@ public final class Days extends BaseSingleFieldPeriod {
             pool.add(Integer.MAX_VALUE, MAX_VALUE);
             pool.add(Integer.MIN_VALUE, MIN_VALUE);
         }
-        
+
         public Days getInstance(int days) {
             Pool pool = Pool.getInstance();
 

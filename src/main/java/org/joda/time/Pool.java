@@ -22,7 +22,7 @@ public class Pool {
         return myInstance;
     }
 
-    private void add(int numeral, Days day) {
+    private void addDay(int numeral, Days day) {
         days.put(new Integer(numeral), day);
     }
 
@@ -49,7 +49,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Days(numeral);
-            pool.add(numeral, (Days) result);
+            pool.addDay(numeral, (Days) result);
         }
 
         return (Days) result;

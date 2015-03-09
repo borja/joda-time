@@ -35,7 +35,7 @@ public class Pool {
 
     }
 
-    public Days getDays(int days) {
+    public static Days getDays(int days) {
         Pool pool = Pool.getInstance();
 
         Object result = pool.getInstance(days);

@@ -69,4 +69,7 @@ public class Pool {
 
         return (Minutes) result;
     }
+
+    private Object getMinutes(int numeral) {
+    }
 }

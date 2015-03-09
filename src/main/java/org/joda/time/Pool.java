@@ -72,7 +72,6 @@ public class Pool {
 
     private Object getMinutes(int numeral) {
         Object instance = minutes.get(new Integer(numeral));
-        
 
         return instance;
     }

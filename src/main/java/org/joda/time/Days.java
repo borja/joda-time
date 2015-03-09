@@ -22,6 +22,8 @@ import org.joda.time.field.FieldUtils;
 import org.joda.time.format.ISOPeriodFormat;
 import org.joda.time.format.PeriodFormatter;
 
+import java.util.HashMap;
+
 /**
  * An immutable time period representing a number of days.
  * <p>
@@ -77,6 +79,8 @@ public final class Days extends BaseSingleFieldPeriod {
      * @return the instance of Days
      */
     public static Days days(int days) {
+        HashMap<Integer, Days>
+
         switch (days) {
             case 0:
                 return ZERO;

@@ -82,6 +82,7 @@ public final class Days extends BaseSingleFieldPeriod {
         HashMap cases =new HashMap<Integer, Days>();
 
         cases.put(new Integer(0), ZERO);
+        cases.put(new Integer(1), ONE);
 
         switch (days) {
             case 0:

@@ -10,6 +10,10 @@ public class Pool {
         this.instances = new HashMap<Integer, Object>();
     }
 
+    public static Pool getInstance() {
+        
+    }
+
     public void add(int numeral, Days day) {
         instances.put(new Integer(numeral), day);
     }

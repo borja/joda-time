@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Pool {
 
     private static Pool myInstance;
-    private HashMap<Integer, Object> days;
+    private HashMap<Integer, Days> days;
     private HashMap<Integer, Minutes> minutes;
 
     private Pool() {

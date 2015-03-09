@@ -80,7 +80,7 @@ public final class Days extends BaseSingleFieldPeriod {
      */
     public static Days days(int days) {
         Pool cases = new Pool();
-        
+
         cases.add(0, ZERO);
         cases.add(1, ONE);
         cases.add(2, TWO);
@@ -498,7 +498,7 @@ public final class Days extends BaseSingleFieldPeriod {
             Object instance = instances.get(new Integer(numeral));
 
             if (instance == null) {
-                return new Days(numeral);
+                return null;
             }
 
             return (Days) instance;

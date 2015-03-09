@@ -480,7 +480,7 @@ public final class Days extends BaseSingleFieldPeriod {
             pool.add(6, SIX);
             pool.add(7, SEVEN);
             pool.add(Integer.MAX_VALUE, MAX_VALUE);
-            this.add(Integer.MIN_VALUE, MIN_VALUE);
+            pool.add(Integer.MIN_VALUE, MIN_VALUE);
         }
 
         @Override

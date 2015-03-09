@@ -42,7 +42,7 @@ public class Pool {
 
     }
 
-    public static Days getDays(int numeral) {
+    public static Days retrieveDays(int numeral) {
         Pool pool = Pool.getInstance();
 
         Object result = pool.getInstance(numeral);
@@ -56,7 +56,7 @@ public class Pool {
     }
 
 
-    public static Minutes getMinutes(int numeral) {
+    public static Minutes retrieveMinutes(int numeral) {
 
         Pool pool = Pool.getInstance();
 

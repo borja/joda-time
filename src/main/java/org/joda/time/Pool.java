@@ -35,15 +35,5 @@ public class Pool {
 
     }
 
-    public static Days getDays(int days) {
-        Pool pool = Pool.getInstance();
-
-        Object result = pool.getInstance(days);
-
-        if (result == null) {
-            result =  new Days(days);
-        }
-
-        return (Days) result;
-    }
+    
 }

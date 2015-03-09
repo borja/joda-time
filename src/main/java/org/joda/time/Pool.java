@@ -41,7 +41,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Days(numeral);
-            instances.put(new Integer(numeral), day)
+            instances.put(new Integer(numeral), result)
         }
 
         return (Days) result;

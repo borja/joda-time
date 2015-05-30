@@ -10,7 +10,7 @@ public class Pool {
     private static GenericPool<Weeks> weeks;
     private static GenericPool<Days> days;
     private static GenericPool<Hours> hours;
-    private HashMap<Integer, Minutes> minutes;
+    private static GenericPool<Minutes> minutes;
     private HashMap<Integer, Seconds> seconds;
 
     private Pool() {
@@ -19,7 +19,7 @@ public class Pool {
         this.weeks = new GenericPool<Weeks>();
         this.days = new GenericPool<Days>();
         this.hours = new GenericPool<Hours>();
-        this.minutes = new HashMap<Integer, Minutes>();
+        this.minutes = new GenericPool<Minutes>();
         this.seconds = new HashMap<Integer, Seconds>();
     }
 
@@ -102,11 +102,11 @@ public class Pool {
 
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getMinutes(numeral);
+        Object result = pool.minutes.obtain(numeral);
 
         if (result == null) {
             result =  new Minutes(numeral);
-            pool.addMinute(numeral, (Minutes) result);
+            pool.minutes.add(numeral, (Minutes) result);
         }
 
         return (Minutes) result;
@@ -127,7 +127,7 @@ public class Pool {
     }
 
     private void addMinute(int numeral, Minutes minute) {
-        minutes.put(new Integer(numeral), minute);
+        minutes.add(new Integer(numeral), minute);
     }
 
     private void addSecond(int numeral, Seconds second) {
@@ -135,7 +135,7 @@ public class Pool {
     }
 
     private Object getMinutes(int numeral) {
-        Object instance = minutes.get(new Integer(numeral));
+        Object instance = minutes.obtain(new Integer(numeral));
 
         return instance;
     }

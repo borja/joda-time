@@ -62,7 +62,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Hours(numeral);
-            pool.addHours(numeral, (Hours) result);
+            pool.addHour(numeral, (Hours) result);
         }
 
         return (Hours) result;
@@ -76,7 +76,7 @@ public class Pool {
 
         if (result == null) {
             result =  new Minutes(numeral);
-            pool.addMinutes(numeral, (Minutes) result);
+            pool.addMinute(numeral, (Minutes) result);
         }
 
         return (Minutes) result;
@@ -104,11 +104,11 @@ public class Pool {
         days.put(new Integer(numeral), day);
     }
 
-    private void addHours(int numeral, Hours hour) {
+    private void addHour(int numeral, Hours hour) {
         hours.put(new Integer(numeral), hour);
     }
 
-    private void addMinutes(int numeral, Minutes minute) {
+    private void addMinute(int numeral, Minutes minute) {
         minutes.put(new Integer(numeral), minute);
     }
 

@@ -194,7 +194,7 @@ public final class Weeks extends BaseSingleFieldPeriod {
      *
      * @param weeks  the number of weeks to represent
      */
-    private Weeks(int weeks) {
+    protected Weeks(int weeks) {
         super(weeks);
     }
 

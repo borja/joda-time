@@ -126,22 +126,12 @@ public class Pool {
         return (Seconds) result;
     }
 
-    private void addHour(int numeral, Hours hour) {
-        hours.add(new Integer(numeral), hour);
-    }
-
     private void addMinute(int numeral, Minutes minute) {
         minutes.put(new Integer(numeral), minute);
     }
 
     private void addSecond(int numeral, Seconds second) {
         seconds.put(new Integer(numeral), second);
-    }
-
-    private Object getHours(int numeral) {
-        Object instance = hours.obtain(new Integer(numeral));
-
-        return instance;
     }
 
     private Object getMinutes(int numeral) {

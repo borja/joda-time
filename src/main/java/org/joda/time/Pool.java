@@ -123,14 +123,4 @@ public class Pool {
 
         return (Seconds) result;
     }
-
-    private void addSecond(int numeral, Seconds second) {
-        seconds.add(new Integer(numeral), second);
-    }
-
-    private Object getSeconds(int numeral) {
-        Object instance = seconds.obtain(new Integer(numeral));
-
-        return instance;
-    }
 }

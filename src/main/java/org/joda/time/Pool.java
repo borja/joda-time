@@ -1,7 +1,5 @@
 package org.joda.time;
 
-import java.util.HashMap;
-
 public class Pool {
 
     private static Pool myInstance;
@@ -11,7 +9,7 @@ public class Pool {
     private static GenericPool<Days> days;
     private static GenericPool<Hours> hours;
     private static GenericPool<Minutes> minutes;
-    private HashMap<Integer, Seconds> seconds;
+    private static GenericPool<Seconds> seconds;
 
     private Pool() {
         this.years = new GenericPool<Years>();
@@ -20,7 +18,7 @@ public class Pool {
         this.days = new GenericPool<Days>();
         this.hours = new GenericPool<Hours>();
         this.minutes = new GenericPool<Minutes>();
-        this.seconds = new HashMap<Integer, Seconds>();
+        this.seconds = new GenericPool<Seconds>();
     }
 
     public static Pool getInstance() {
@@ -116,22 +114,22 @@ public class Pool {
 
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getSeconds(numeral);
+        Object result = pool.seconds.obtain(numeral);
 
         if (result == null) {
             result =  new Seconds(numeral);
-            pool.addSecond(numeral, (Seconds) result);
+            pool.seconds.add(numeral, (Seconds) result);
         }
 
         return (Seconds) result;
     }
 
     private void addSecond(int numeral, Seconds second) {
-        seconds.put(new Integer(numeral), second);
+        seconds.add(new Integer(numeral), second);
     }
 
     private Object getSeconds(int numeral) {
-        Object instance = seconds.get(new Integer(numeral));
+        Object instance = seconds.obtain(new Integer(numeral));
 
         return instance;
     }

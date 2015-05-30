@@ -214,7 +214,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      *
      * @param hours  the number of hours to represent
      */
-    private Hours(int hours) {
+    protected Hours(int hours) {
         super(hours);
     }
 

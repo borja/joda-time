@@ -207,7 +207,7 @@ public final class Months extends BaseSingleFieldPeriod {
      *
      * @param months  the number of months to represent
      */
-    private Months(int months) {
+    protected Months(int months) {
         super(months);
     }
 

@@ -194,7 +194,7 @@ public final class Seconds extends BaseSingleFieldPeriod {
      *
      * @param seconds  the number of seconds to represent
      */
-    private Seconds(int seconds) {
+    protected Seconds(int seconds) {
         super(seconds);
     }
 

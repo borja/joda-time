@@ -126,10 +126,6 @@ public class Pool {
         return (Seconds) result;
     }
 
-    private void addYear(int numeral, Years year) {
-        years.add(new Integer(numeral), year);
-    }
-
     private void addMonth(int numeral, Months month) {
         months.put(new Integer(numeral), month);
     }
@@ -152,12 +148,6 @@ public class Pool {
 
     private void addSecond(int numeral, Seconds second) {
         seconds.put(new Integer(numeral), second);
-    }
-
-    private Object getYears(int numeral){
-        Object instance = years.obtain(new Integer(numeral));
-
-        return instance;
     }
 
     private Object getMonths(int numeral){

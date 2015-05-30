@@ -171,7 +171,7 @@ public final class Years extends BaseSingleFieldPeriod {
      *
      * @param years  the number of years to represent
      */
-    private Years(int years) {
+    protected Years(int years) {
         super(years);
     }
 

@@ -126,10 +126,6 @@ public class Pool {
         return (Seconds) result;
     }
 
-    private void addDay(int numeral, Days day) {
-        days.add(new Integer(numeral), day);
-    }
-
     private void addHour(int numeral, Hours hour) {
         hours.put(new Integer(numeral), hour);
     }
@@ -140,12 +136,6 @@ public class Pool {
 
     private void addSecond(int numeral, Seconds second) {
         seconds.put(new Integer(numeral), second);
-    }
-
-    private Object getDays(int numeral){
-        Object instance = days.obtain(new Integer(numeral));
-
-        return instance;
     }
 
     private Object getHours(int numeral) {

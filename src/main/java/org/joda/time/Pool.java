@@ -7,7 +7,7 @@ public class Pool {
     private static Pool myInstance;
     private static GenericPool<Years> years;
     private static GenericPool<Months> months;
-    private HashMap<Integer, Weeks> weeks;
+    private static GenericPool<Weeks> weeks;
     private HashMap<Integer, Days> days;
     private HashMap<Integer, Hours> hours;
     private HashMap<Integer, Minutes> minutes;
@@ -16,7 +16,7 @@ public class Pool {
     private Pool() {
         this.years = new GenericPool<Years>();
         this.months = new GenericPool<Months>();
-        this.weeks = new HashMap<Integer, Weeks>();
+        this.weeks = new GenericPool<Weeks>();
         this.days = new HashMap<Integer, Days>();
         this.hours = new HashMap<Integer, Hours>();
         this.minutes = new HashMap<Integer, Minutes>();
@@ -61,11 +61,11 @@ public class Pool {
     public static Weeks retrieveWeeks(int numeral) {
         Pool pool = Pool.getInstance();
 
-        Object result = pool.getWeeks(numeral);
+        Object result = pool.weeks.obtain(numeral);
 
         if (result == null) {
             result =  new Weeks(numeral);
-            pool.addWeek(numeral, (Weeks) result);
+            pool.weeks.add(numeral, (Weeks) result);
         }
 
         return (Weeks) result;
@@ -127,7 +127,7 @@ public class Pool {
     }
 
     private void addWeek(int numeral, Weeks week) {
-        weeks.put(new Integer(numeral), week);
+        weeks.add(new Integer(numeral), week);
     }
 
     private void addDay(int numeral, Days day) {
@@ -147,7 +147,7 @@ public class Pool {
     }
 
     private Object getWeeks(int numeral){
-        Object instance = weeks.get(new Integer(numeral));
+        Object instance = weeks.obtain(new Integer(numeral));
 
         return instance;
     }

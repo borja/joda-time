@@ -126,10 +126,6 @@ public class Pool {
         return (Seconds) result;
     }
 
-    private void addMonth(int numeral, Months month) {
-        months.add(new Integer(numeral), month);
-    }
-
     private void addWeek(int numeral, Weeks week) {
         weeks.put(new Integer(numeral), week);
     }
@@ -148,12 +144,6 @@ public class Pool {
 
     private void addSecond(int numeral, Seconds second) {
         seconds.put(new Integer(numeral), second);
-    }
-
-    private Object getMonths(int numeral){
-        Object instance = months.obtain(new Integer(numeral));
-
-        return instance;
     }
 
     private Object getWeeks(int numeral){

@@ -2,7 +2,7 @@ package org.joda.time;
 
 import java.util.HashMap;
 
-public abstract class MiniPool<T> extends Pool {
+public abstract class MiniPool<T> implements PoolRetriever<T> {
 
   private HashMap<Integer, T> pool;
 
@@ -12,7 +12,7 @@ public abstract class MiniPool<T> extends Pool {
 
   protected abstract T create(int numeral);
 
-  @Override public T retrieve(int numeral) {
+  public T retrieve(int numeral) {
     T result = obtain(numeral);
 
     if (result == null) {

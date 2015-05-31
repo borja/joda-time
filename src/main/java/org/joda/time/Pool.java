@@ -1,8 +1,6 @@
 package org.joda.time;
 
-public abstract class Pool {
-
-    public abstract Object retrieve(int numeral);
+public class Pool {
 
     public static Years retrieveYears(int numeral) {
         YearsPool pool = YearsPool.getInstance();
